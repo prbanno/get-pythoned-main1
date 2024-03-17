@@ -1,0 +1,12 @@
+<hero class="grid bg-gray-700 text-white text-center bg-cover z-10 relative bg-[url('https://cdn.pixabay.com/photo/2013/07/12/18/17/equalizer-153212_1280.png')]">
+    <div class="col-start-1 row-start-1 bg-gray-800 bg-opacity-40 w-full h-full"></div>
+    <div class="col-start-1 row-start-1 py-20 px-10 ">
+        <h1 class="font1 text-6xl title-fadein">MuRec</h1>
+        <p class="text-lg font-bold mb-5">Get music recommendations for every mood</p>
+        <a class="button"
+            hx-get="{% url 'login' %}"
+            hx-push-url="true"
+            hx-target="body"
+        >Get Started</a>
+    </div>
+</hero>

@@ -1,0 +1,50 @@
+<aside x-show="mobileSidebarOpen" x-cloak class="md:!block col-span-full md:col-span-1 lg:mr-[20%] order-1 md:order-2"
+    x-transition:enter="duration-300 ease-out"
+    x-transition:enter-start="opacity-0 -mt-96"
+    x-transition:enter-end="opacity-100 mt-0">
+    <section class="card p-4">
+        <h2>Categories</h2>
+        <ul class="hoverlist">
+            <li>
+                <a                
+                    hx-get="{% url 'mood' %}?type={{ 'happy' }}"
+                    hx-push-url="true"
+                    hx-include="[name='type']"
+                    hx-target="body">
+                    <img class="w-8 h-8 object-cover mr-2" src="https://img.icons8.com/small/96/null/happy.png">
+                    <span class="font-bold text-sm">Happy</span>
+                </a>
+            </li>
+            <li>
+                <a
+                    hx-get="{% url 'mood' %}?type={{ 'sad' }}"
+                    hx-push-url="true"
+                    hx-include="[name='type']"
+                    hx-target="body">
+                    <img class="w-8 h-8 object-cover mr-2" src="https://img.icons8.com/small/96/null/sad.png">
+                    <span class="font-bold text-sm">Sad</span>
+                </a>
+            </li>
+            <li>
+                <a
+                    hx-get="{% url 'mood' %}?type={{ 'turnt' }}"
+                    hx-push-url="true"
+                    hx-include="[name='type']"
+                    hx-target="body">
+                    <img class="w-8 h-8 object-cover mr-2" src="https://img.icons8.com/small/96/null/bat.png">
+                    <span class="font-bold text-sm">Turnt</span>
+                </a>
+            </li>
+            <li>
+                <a
+                    hx-get="{% url 'mood' %}?type={{ 'mellow' }}"
+                    hx-push-url="true"
+                    hx-include="[name='type']"
+                    hx-target="body">
+                    <img class="w-8 h-8 object-cover mr-2" src="https://img.icons8.com/small/96/null/landscape.png">
+                    <span class="font-bold text-sm">Mellow</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+</aside>

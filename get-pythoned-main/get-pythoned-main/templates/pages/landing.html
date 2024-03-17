@@ -1,0 +1,17 @@
+{% extends 'layouts/land_lay.html' %}
+
+{% block content %}
+
+    <div>
+        <h2 class="text-2xl sm:text-2xl md:text-4xl font-bold text-indigo-400 mb-5 italic">Recently played</h2>
+        <div class="flex overflow-x-auto space-x-8">
+            {% for track in history %}
+                <div class="flex-shrink-0 rounded-full px-5 justify-center">
+                    <img src="https://i.scdn.co/image/ab67616d0000b2739a53cdc0eb6410541638a23a" class="h-36 w-28" alt="">
+                    <h4 class="font-bold text-black mb-5 italic">How We Do</h4>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
